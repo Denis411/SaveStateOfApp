@@ -7,13 +7,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class VC1: UIViewController, Storyboarded {
+    weak var router: Router?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func next(_ sender: UIButton) {
+        router?.vc2()
+    }
 }
-
